@@ -4,11 +4,11 @@ Title: My function
 Author: Kevin Cook
 Status: Active
 Type: Process
-Created: 06-Septmber-2020
+Created: 06-September-2020
 Post: 06-September-2020
 History:
 """
-def hello_world_function():
-    print("Hello World!")
+def hello_world_function(): #creating function
+    print("Hello World!") # print statement
 
-hello_world_function()
+hello_world_function() # calling function
