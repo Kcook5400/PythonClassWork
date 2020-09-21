@@ -5,7 +5,7 @@ class TestSetOne(unittest.TestCase):
     def test_pass(self):
         pass
     def test_price_under_10_5_cash_10_discount(self):
-        self.assertEquals(calculate_price(9, 5, 10), 9.33 )
+        self.assertEquals(calculate_price(9, 5, 10), 9.33)
 
     def test_price_under_10_5_cash_15_discount(self):
         self.assertEquals(calculate_price(9, 5, 15), 9.15)
@@ -50,7 +50,7 @@ class TestSetThree(unittest.TestCase):
         self.assertEquals(calculate_price(31, 5, 10), 33.95)
 
     def test_price_under_50_5_cash_15_discount(self):
-        self.assertEquals(calculate_price(31, 5, 15), 33.72)
+        self.assertEquals(calculate_price(31, 5, 15), 32.72)
 
     def test_price_under_50_5_cash_20_discount(self):
         self.assertEquals(calculate_price(31, 5, 20), 31.50)
@@ -62,7 +62,7 @@ class TestSetThree(unittest.TestCase):
             self.assertEquals(calculate_price(31, 10, 15), 28.73)
 
     def test_price_under_10_10_cash_20_discount(self):
-            self.assertEquals(calculate_price(9, 10, 20), 27.74)
+            self.assertEquals(calculate_price(31, 10, 20), 27.74)
 
 class TestSetFour(unittest.TestCase):
     def test_pass(self):
