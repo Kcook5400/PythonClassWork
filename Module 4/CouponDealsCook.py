@@ -1,4 +1,13 @@
-
+"""
+PEP: 8
+Title: CouponDealsCook
+Author: Kevin Cook
+Status: Active
+Type: Process
+Created: 20-September-2020
+Post: 20-September-2020
+History:
+"""
 def calculate_price(price, cash_coupon, percent_coupon):
 
     tax = .06
