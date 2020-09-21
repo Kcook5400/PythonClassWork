@@ -5,7 +5,7 @@ class TestSetOne(unittest.TestCase):
     def test_pass(self):
         pass
     def test_price_under_10_5_cash_10_discount(self):
-        self.assertEquals(calculate_price(9, 5, 10), 18.65)
+        self.assertEquals(calculate_price(9, 5, 10), 24.51)
 
     def test_price_under_10_5_cash_15_discount(self):
         self.assertEquals(calculate_price(9, 5, 15), 18.65)
