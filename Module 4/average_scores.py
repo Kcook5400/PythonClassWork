@@ -3,8 +3,8 @@ Title: average_scores
 Author: Kevin Cook
 Status: Active
 Type: Process
-Created: 13-September-2020
-Post: 13-September-2020
+Created: 21-September-2020
+Post: 121September-2020
 History:
 """
 
@@ -23,9 +23,4 @@ if __name__ == '__main__':
     score1 = int(input("Enter score 1"))
     score2 = int(input("Enter score 2"))
     score3 = int(input("Enter score 3"))
-    average_score = average(score1, score2, score3)
-try:
-    average
-except:
-    ValueError
-    print("Your average score is: ", str(average_score))
+    print("Your average score is: ", average(score1, score2, score3))
