@@ -26,7 +26,7 @@ while str(inputs) != "Exit":
                 print("That is not between 1 and 100")
             inputs = input("Enter another number or type 'Exit' to quit")
         except ValueError:
-            Catch = input("That is not an integer, do you want to quit the program?")
+            Catch = input("That is not an number, do you want to quit the program?")
             if Catch == "Yes":
                 flag = True
             inputs = input("Enter another number or type 'Exit' to quit")
