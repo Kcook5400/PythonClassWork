@@ -13,7 +13,6 @@ History:
 flag = False
 input_array = []
 inputs = (input("Enter a number from 1 to 100 or type 'Exit' to quit"))
-
 while str(inputs) != "Exit":
 
     while flag == False:
@@ -30,6 +29,5 @@ while str(inputs) != "Exit":
             if Catch == "Yes":
                 flag = True
             inputs = input("Enter another number or type 'Exit' to quit")
-
 for x in input_array:
     print(x)

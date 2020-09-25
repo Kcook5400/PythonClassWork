@@ -30,12 +30,12 @@ def calculate_price(price, cash_coupon, percent_coupon):
 
     return order_total_formatted
 
-if __name__ == '__main__':
-
-    prices = [9, 11, 31, 51]
+"""if __name__ == '__main__':
+    prices = [9, 11, 31, 51]  
     cash_coupons = [5,10]
     discounts = [10,15,20]
     for  x in prices:
       for y in cash_coupons:
           for z in discounts:
-              print(calculate_price(x,y,z))
+              print(calculate_price(x,y,z))"""
+print(calculate_price(10, 10, 10))

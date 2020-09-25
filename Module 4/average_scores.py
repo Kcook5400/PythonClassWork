@@ -23,4 +23,7 @@ if __name__ == '__main__':
     score1 = int(input("Enter score 1"))
     score2 = int(input("Enter score 2"))
     score3 = int(input("Enter score 3"))
-    print("Your average score is: ", average(score1, score2, score3))
+    try:
+        print("Your average score is: ", average(score1, score2, score3))
+    except:
+        raise ValueError
