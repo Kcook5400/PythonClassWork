@@ -1,11 +1,9 @@
 
 
 
-def score_input(prompt, retries =2, reminder='please try again'):
-    while True:
-        ok = input(prompt)
-        if ok in("test"):
-            return True
-        if retries <0:
-            raise ValueError("sorry, bad input")
-        print("reminder")
+def score_input(test_name, test_score=0, retries =2, reminder='Please try again'):
+
+        testing_name = input(test_name)
+
+        return testing_name
+
