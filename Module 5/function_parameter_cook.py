@@ -12,7 +12,7 @@ History:
 def multiply_string(message, n):
 
     for x in range(int(n)):
-        print (message)
+        return (message)
 
 if __name__ == "__main__":
     message = input("Enter your favorite word")
