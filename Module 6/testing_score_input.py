@@ -14,6 +14,10 @@ class MyTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             score_input("test", test_score=-1)
 
+    def test_score_input_test_score_above_range(self):
+        with self.assertRaises(ValueError):
+            score_input("test", test_score=101)
+
 
 if __name__ == '__main__':
     unittest
