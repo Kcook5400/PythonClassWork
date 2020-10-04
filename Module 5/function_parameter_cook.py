@@ -10,6 +10,7 @@ History:
 """
 
 def multiply_string(message, n):
+""" returns a string as many times as entered"""
 
     for x in range(int(n)):
         return (message)
