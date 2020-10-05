@@ -18,6 +18,9 @@ class MyTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             score_input("test", test_score=101)
 
+    def test_score_input_test_non_numeric(self):
+        with self.assertRaises(ValueError):
+            score_input("test", test_score="*")
 
 if __name__ == '__main__':
     unittest
