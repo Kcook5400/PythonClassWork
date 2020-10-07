@@ -19,9 +19,9 @@ while str(inputs) != "Exit":
         try:
             if str(inputs) == "Exit":
                 break
-            if int(inputs) >= 1 or int(inputs) <= 100:
+            if int(inputs) >= 1 and int(inputs) <= 100:
                 input_array.append(inputs)
-            if int(inputs) < 1 or int(inputs) > 100:
+            if int(inputs) < 1 and int(inputs) > 100:
                 print("That is not between 1 and 100")
             inputs = input("Enter another number or type 'Exit' to quit")
         except ValueError:
