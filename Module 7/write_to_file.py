@@ -2,7 +2,7 @@
 
 
 def write_to_file(tup1):
-    f = open("data", "a")
+    f = open("Kevin Cook.txt", "a")
     f.write("Kevin Cook wrote here!")
     f.write('\n'+tup1)
     f.close()
@@ -18,7 +18,7 @@ def get_student_input():
 
     write_to_file(str(input_list))
 def read_from_file():
-    f=open("data", "r")
+    f=open("Kevin Cook.txt", "r")
     print(f.read())
     f.close
 
