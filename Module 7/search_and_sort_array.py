@@ -1,3 +1,13 @@
+"""
+PEP: 8
+Title: search_and_sort_array
+Author: Kevin Cook
+Status: Active
+Type: Process
+Created: 12-October-2020
+Post: 12-October-2020
+History:
+"""
 import array as arr
 
 

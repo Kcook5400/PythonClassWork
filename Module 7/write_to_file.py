@@ -1,4 +1,13 @@
-
+"""
+PEP: 8
+Title: write_to_file
+Author: Kevin Cook
+Status: Active
+Type: Process
+Created: 12-October-2020
+Post: 12-October-2020
+History:
+"""
 
 
 def write_to_file(tup1):
