@@ -1,3 +1,13 @@
+"""
+PEP: 8
+Title: test_dict_membership
+Author: Kevin Cook
+Status: Active
+Type: Process
+Created: 12-October-2020
+Post: 12-October-2020
+History:
+"""
 import unittest
 from dict_membership import dict_membership
 
