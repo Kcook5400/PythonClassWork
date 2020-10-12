@@ -4,4 +4,4 @@ def dict_membership(data):
     if data in a:
         return True
     else:
-        return False'''
+        return False
