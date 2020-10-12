@@ -1,3 +1,14 @@
+"""
+PEP: 8
+Title: basic_list
+Author: Kevin Cook
+Status: Active
+Type: Process
+Created: 12-October-2020
+Post: 12-October-2020
+History:
+"""
+
 def make_list():
     i=0
     input_return_list = []

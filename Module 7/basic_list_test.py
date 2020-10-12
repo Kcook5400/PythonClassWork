@@ -1,6 +1,17 @@
+"""
+PEP: 8
+Title: basic_list
+Author: Kevin Cook
+Status: Active
+Type: Process
+Created: 12-October-2020
+Post: 12-October-2020
+History:
+"""
+
 import unittest
 from unittest.mock import patch
-from basic_list import make_list, get_input
+from basic_list import make_list
 
 
 class MyTestCase(unittest.TestCase):
