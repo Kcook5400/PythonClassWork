@@ -12,7 +12,9 @@ class MyTestCase(unittest.TestCase):
     def test_D(self):
         self.assertEqual(switch_average("D"), 4)
     def test_non_function(self):
-        self.assertRaises(switch_average("E"),ValueError )
+        with self.assertRaises(ValueError):
+            switch_average("E")
+
 
 
 if __name__ == '__main__':
