@@ -1,3 +1,14 @@
+"""
+PEP: 8
+Title: basic_GUI
+Author: Kevin Cook
+Status: Active
+Type: Process
+Created: 26-October-2020
+Post: 26-October-2020
+History:
+"""
+
 import tkinter
 import easygui
 

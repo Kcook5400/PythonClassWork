@@ -1,3 +1,13 @@
+"""
+PEP: 8
+Title: first_scraper
+Author: Kevin Cook
+Status: Active
+Type: Process
+Created: 26-October-2020
+Post: 26-October-2020
+History:
+"""
 import requests
 import bs4
 
