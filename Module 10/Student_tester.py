@@ -5,7 +5,7 @@ from Student import Student
 
 class MyTestCase(unittest.TestCase):
     def setUp(self):
-        self.Student = Student('Smith', 'John', "English")
+        self.Student = Student('Smith', 'John', "English", 4.0)
 
     def tearDown(self):
         del self.Student
@@ -17,7 +17,10 @@ class MyTestCase(unittest.TestCase):
 
 
     def test_object_created_all_attributes(self):
-        pass
+        self.assertEqual(self.Student.last_name, 'Smith')
+        self.assertEqual(self.Student.first_name, 'John')
+        self.assertEqual(self.Student.major, 'English')
+        self.assertEqual(self.Student.gpa, 4.0)
 
     def test_student_str(self):
         pass
