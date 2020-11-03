@@ -30,7 +30,8 @@ class MyTestCase(unittest.TestCase):
             p = Student('John', 'English', 4.0)
 
     def test_object_not_created_error_first_name(self):
-        pass
+        with self.assertRaises(ValueError):
+            p = Student('John', 'English', 4.0)
 
     def test_object_not_created_error_major(self):
         pass
