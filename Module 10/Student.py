@@ -2,8 +2,12 @@ class Student:
     """Student class"""
     def __init__(self, lname, fname, major, gpa=0.0):
         self.last_name = lname
+        if lname is None:
+            raise ValueError
         self.first_name = fname
+
         self.major = major
+
         self.gpa = gpa
 
     def __str__(self):
