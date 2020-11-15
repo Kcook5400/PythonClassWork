@@ -27,5 +27,8 @@ class MyTestCase(unittest.TestCase):
     def test_bad_phone_number(self):
         with self.assertRaises(Exception):
             self.Cust1 = Customer("Smith", "John", "555123-5555", 1200)
+    def test_str(self):
+        self.assertEqual(self.Cust1.__str__(), "Customer Id: 1200, first name John, last name Smith, Phone:555-123-5555")
+
 if __name__ == '__main__':
     unittest.main()
