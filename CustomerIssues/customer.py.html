@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>customer.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #629755; font-style: italic;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #6897bb;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+customer.py</font>
+</center></td></tr></table>
+<pre><span class="s0">&quot;&quot;&quot; 
+PEP: 8 
+Title: customer 
+Author: Kevin Cook 
+Status: Active 
+Type: Process 
+Created: 11-1-2020 
+Post: 11-1-2020 
+History: 
+&quot;&quot;&quot;</span>
+<span class="s2">from </span><span class="s1">Exceptions </span><span class="s2">import </span><span class="s1">CustIDError</span>
+
+
+<span class="s2">class </span><span class="s1">Customer:</span>
+
+    <span class="s2">def </span><span class="s1">__init__(self</span><span class="s2">, </span><span class="s1">last_name</span><span class="s2">, </span><span class="s1">first_name</span><span class="s2">, </span><span class="s1">phone_number</span><span class="s2">, </span><span class="s1">customer_id):</span>
+        <span class="s1">self.last_name = last_name</span>
+        <span class="s1">self.first_name = first_name</span>
+        <span class="s1">self.phone_number = phone_number</span>
+        <span class="s1">self.customer_id = customer_id</span>
+        <span class="s2">try</span><span class="s1">:</span>
+            <span class="s1">customer_id </span><span class="s2">in </span><span class="s1">range(</span><span class="s3">1000</span><span class="s2">, </span><span class="s3">9999</span><span class="s1">)</span>
+        <span class="s2">except</span><span class="s1">:</span>
+            <span class="s2">raise </span><span class="s1">Exception(CustIDError)</span>
+        <span class="s2">try</span><span class="s1">:</span>
+            <span class="s1">last_name.isalpha()</span>
+        <span class="s2">except</span><span class="s1">:</span>
+            <span class="s2">raise </span><span class="s1">LastNameError</span>
+
+    <span class="s2">def </span><span class="s1">display(self):</span>
+        <span class="s2">return </span><span class="s1">str(self)</span>
+
+    <span class="s2">def </span><span class="s1">__str__(self):</span>
+        <span class="s2">return </span><span class="s4">'Customer Id: ' </span><span class="s1">+ str(</span>
+            <span class="s1">self.customer_id) + </span><span class="s4">', first name ' </span><span class="s1">+ self.first_name + </span><span class="s4">', last name ' </span><span class="s1">+ self.last_name + </span><span class="s4">', Phone:' </span><span class="s1">+ str(</span>
+            <span class="s1">self.phone_number)</span>
+
+
+<span class="s1">Cust1 = Customer(</span><span class="s4">&quot;Sm99ith&quot;</span><span class="s2">, </span><span class="s4">&quot;John&quot;</span><span class="s2">, </span><span class="s4">&quot;555-123-5555&quot;</span><span class="s2">, </span><span class="s3">12</span><span class="s1">)</span>
+<span class="s1">print(Cust1.display())</span>
+</pre>
+</body>
+</html>

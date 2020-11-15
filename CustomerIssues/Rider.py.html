@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>Rider.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #629755; font-style: italic;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #6897bb;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Rider.py</font>
+</center></td></tr></table>
+<pre><span class="s0">&quot;&quot;&quot; 
+PEP: 8 
+Title: Rider 
+Author: Kevin Cook 
+Status: Active 
+Type: Process 
+Created: 11-12-2020 
+Post: 11-12-2020 
+History: 
+&quot;&quot;&quot;</span>
+<span class="s2">from </span><span class="s1">abc </span><span class="s2">import </span><span class="s1">ABC</span><span class="s2">, </span><span class="s1">abstractmethod</span>
+
+
+<span class="s2">class </span><span class="s1">Rider(ABC):</span>
+    <span class="s1">@abstractmethod</span>
+    <span class="s2">def </span><span class="s1">Ride(self):</span>
+        <span class="s2">pass</span>
+    <span class="s1">@abstractmethod</span>
+    <span class="s2">def </span><span class="s1">Riders(self):</span>
+        <span class="s2">pass</span>
+
+<span class="s2">class </span><span class="s1">Bicycle(Rider):</span>
+
+    <span class="s2">def </span><span class="s1">__init__(self):</span>
+        <span class="s1">self.num_wheels = </span><span class="s3">2</span>
+        <span class="s1">self.Riders=</span><span class="s3">1</span>
+
+    <span class="s2">def </span><span class="s1">Ride(self):</span>
+        <span class="s2">return </span><span class="s1">self.num_wheels</span>
+    <span class="s2">def </span><span class="s1">Riders(self):</span>
+        <span class="s2">return </span><span class="s1">self.Riders</span>
+    <span class="s2">def </span><span class="s1">__str__(self):</span>
+        <span class="s2">return </span><span class="s4">'Bicycle, Number of Wheels= '</span><span class="s1">+str(self.num_wheels)+</span><span class="s4">', Number of Riders= '</span><span class="s1">+str(self.Riders)</span>
+
+
+<span class="s2">class </span><span class="s1">Motorcycle(Rider):</span>
+
+    <span class="s2">def </span><span class="s1">__init__(self):</span>
+        <span class="s1">self.num_wheels = </span><span class="s3">2</span>
+        <span class="s1">self.Riders = </span><span class="s3">1</span>
+
+    <span class="s2">def </span><span class="s1">Ride(self):</span>
+        <span class="s2">return </span><span class="s1">self.num_wheels</span>
+
+    <span class="s2">def </span><span class="s1">Riders(self):</span>
+        <span class="s2">return </span><span class="s1">self.Riders</span>
+    <span class="s2">def </span><span class="s1">__str__(self):</span>
+        <span class="s2">return </span><span class="s4">'Motorcycle, Number of Wheels= '</span><span class="s1">+str(self.num_wheels)+</span><span class="s4">', Number of Riders= '</span><span class="s1">+str(self.Riders)</span>
+
+
+<span class="s2">class </span><span class="s1">Car(Rider):</span>
+
+    <span class="s2">def </span><span class="s1">__init__(self):</span>
+        <span class="s1">self.num_wheels = </span><span class="s3">4</span>
+        <span class="s1">self.Riders = </span><span class="s3">4</span>
+
+    <span class="s2">def </span><span class="s1">Ride(self):</span>
+        <span class="s2">return </span><span class="s1">self.num_wheels</span>
+
+    <span class="s2">def </span><span class="s1">Riders(self):</span>
+        <span class="s2">return </span><span class="s1">self.Riders</span>
+
+    <span class="s2">def </span><span class="s1">__str__(self):</span>
+        <span class="s2">return </span><span class="s4">'Car, Number of Wheels= '</span><span class="s1">+str(self.num_wheels)+</span><span class="s4">', Number of Riders= '</span><span class="s1">+str(self.Riders)</span>
+
+<span class="s1">C=Car()</span>
+<span class="s1">print(str(C))</span>
+
+<span class="s1">M=Motorcycle()</span>
+<span class="s1">print(str(M))</span>
+
+<span class="s1">B=Bicycle()</span>
+<span class="s1">print(str(B))</span></pre>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>CountyDemos.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #629755; font-style: italic;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+.s5 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+CountyDemos.py</font>
+</center></td></tr></table>
+<pre><span class="s0">&quot;&quot;&quot; 
+PEP: 8 
+Title: County_Demos 
+Author: Kevin Cook 
+Status: Active 
+Type: Process 
+Created: 11-11-2020 
+Post: 11-11-2020 
+History: 
+&quot;&quot;&quot;</span>
+<span class="s2">import </span><span class="s1">csv</span>
+<span class="s2">class </span><span class="s1">CountyDemos:</span>
+
+    <span class="s2">def </span><span class="s1">__init__(self</span><span class="s2">, </span><span class="s1">Rank</span><span class="s2">, </span><span class="s1">County</span><span class="s2">, </span><span class="s1">Per_Capita_income</span><span class="s2">, </span><span class="s1">Median_household_income</span><span class="s2">, </span><span class="s1">Median_Family_Income</span><span class="s2">, </span><span class="s1">Population</span><span class="s2">, </span><span class="s1">Number_of_Households):</span>
+        <span class="s1">self.Rank = Rank</span>
+        <span class="s1">self.County = County</span>
+        <span class="s1">self.Per_Capita_Income= int(Per_Capita_income.replace(</span><span class="s3">','</span><span class="s2">, </span><span class="s3">''</span><span class="s1">).replace(</span><span class="s3">'$'</span><span class="s2">,</span><span class="s3">''</span><span class="s1">))</span>
+        <span class="s1">self.Median_household_income = int(Median_household_income.replace(</span><span class="s3">','</span><span class="s2">, </span><span class="s3">''</span><span class="s1">).replace(</span><span class="s3">'$'</span><span class="s2">,</span><span class="s3">''</span><span class="s1">))</span>
+        <span class="s1">self.Median_Family_Income = int(Median_Family_Income.replace(</span><span class="s3">','</span><span class="s2">, </span><span class="s3">''</span><span class="s1">).replace(</span><span class="s3">'$'</span><span class="s2">,</span><span class="s3">''</span><span class="s1">))</span>
+        <span class="s1">self.Population = Population.replace(</span><span class="s3">','</span><span class="s2">, </span><span class="s3">''</span><span class="s1">)</span>
+        <span class="s1">self.Number_of_Households = Number_of_Households.replace(</span><span class="s3">','</span><span class="s2">, </span><span class="s3">''</span><span class="s1">)</span>
+
+
+<span class="s2">with </span><span class="s1">open(</span><span class="s3">'Iowa 2010 Census Data Population income.csv'</span><span class="s1">) </span><span class="s2">as </span><span class="s1">csv_file:</span>
+    <span class="s1">csv_reader = csv.reader(csv_file</span><span class="s2">, </span><span class="s1">delimiter=</span><span class="s3">','</span><span class="s1">)</span>
+    <span class="s1">line_count = </span><span class="s4">0</span>
+    <span class="s5"># initialize empty dictionary</span>
+    <span class="s1">county={}</span>
+
+    <span class="s2">for </span><span class="s1">row </span><span class="s2">in </span><span class="s1">csv_reader:</span>
+        <span class="s2">if </span><span class="s1">line_count == </span><span class="s4">0</span><span class="s1">:</span>
+            <span class="s1">line_count += </span><span class="s4">1</span>
+            <span class="s2">continue</span>
+        <span class="s1">county[str(row[</span><span class="s4">1</span><span class="s1">])] = CountyDemos(row[</span><span class="s4">0</span><span class="s1">]</span><span class="s2">, </span><span class="s1">row[</span><span class="s4">1</span><span class="s1">]</span><span class="s2">, </span><span class="s1">row[</span><span class="s4">2</span><span class="s1">]</span><span class="s2">, </span><span class="s1">row[</span><span class="s4">3</span><span class="s1">]</span><span class="s2">, </span><span class="s1">row[</span><span class="s4">4</span><span class="s1">]</span><span class="s2">, </span><span class="s1">row[</span><span class="s4">5</span><span class="s1">]</span><span class="s2">, </span><span class="s1">row[</span><span class="s4">6</span><span class="s1">])</span>
+    <span class="s1">Dallas_county_pop = county[</span><span class="s3">'Dallas'</span><span class="s1">].Population</span>
+    <span class="s1">print(</span><span class="s3">&quot;The population of Dallas county is {:,.0f}&quot;</span><span class="s1">.format(float(Dallas_county_pop)))</span>
+
+
+
+    <span class="s2">def </span><span class="s1">DallasCountyInfo(county):</span>
+        <span class="s1">population = county[</span><span class="s3">'Dallas'</span><span class="s1">].Population</span>
+        <span class="s1">household_num = county[</span><span class="s3">'Dallas'</span><span class="s1">].Number_of_Households</span>
+        <span class="s1">pop_div_house= int(population)/int(household_num)</span>
+        <span class="s1">print(</span><span class="s3">&quot;The population of Dallas county divided by the number of households is {:,.2f}&quot;</span><span class="s1">.format(pop_div_house))</span>
+        <span class="s1">pop_sum=</span><span class="s4">0</span>
+        <span class="s2">for </span><span class="s1">key </span><span class="s2">in </span><span class="s1">county:</span>
+            <span class="s1">pop_sum += int(county[key].Population)</span>
+        <span class="s1">print(</span><span class="s3">&quot;The total population of Iowa is {:,.0f}&quot;</span><span class="s1">.format(pop_sum))</span>
+
+<span class="s1">DallasCountyInfo(county)</span></pre>
+</body>
+</html>
