@@ -49,9 +49,14 @@ canvas1.create_window(500, 250, window=Duration)
 def enter_appt():
     AM = var5.get()
     PM = var6.get()
-    AM_PM_String = "PM"
+    AM_PM_String = None
+    if months.get() == "" or dates.get() == "" or times.get() == "" or durations.get() == "":
+        msgbox("Missing field!")
+        return
     if AM>PM:
         AM_PM_String="AM"
+    if AM<PM:s
+        AM_PM_String = "PM"
     if AM==PM:
         msgbox("Select either AM or PM")
         return
