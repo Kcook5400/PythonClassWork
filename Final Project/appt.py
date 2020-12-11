@@ -2,6 +2,19 @@
 
 class appt:
     def __init__(self, month, day, time, duration, am_or_pm, subject):
+        try:
+            val = int(month)
+            val = int(day)
+            val = int(time)
+            val = int(duration)
+            val = str(am_or_pm)
+            val = str(subject)
+        except ValueError:
+            raise ValueError
+        if not 1 <= month <= 12:
+            raise ValueError
+
+
         self.month = month
         self.day = int(day)
         self.time = int(time)
