@@ -2,28 +2,39 @@ from Scheduler_Exceptions import day_range, time_range
 
 class appt:
     def __init__(self, month, day, time, duration, am_or_pm, subject):
+        """Creates instance of appt class"""
+        months_list = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September",
+                       "October", "November", "December"]
+        """validating month, day, time, and duration variables are ints"""
         try:
-            val = int(month)
-            val = int(day)
-            val = int(time)
-            val = int(duration)
+            val = str(month)
+            val = str(day)
+            val = str(time)
+            val = str(duration)
         except ValueError:
             raise ValueError
+        """validating am_or_pm variable is a str"""
         if str(am_or_pm).isalpha() == False:
             raise ValueError
-        if not 1 <= month <= 12:
+        """validating month variable is a month"""
+        self.month= month
+        if not month in months_list:
             raise ValueError
-        months = [9,4,6,11]
-        if month in months and day > 30:
+        """creating months list for validating months with <31 days"""
+        months = ["September", "April", "June", "November"]
+        """validating days variable is not >30 in months with only 30 days"""
+        if month in months and int(day) > 30:
             raise day_range
-        if not 1 <= day <= 31:
+        """validating days variable is between 1-31"""
+        if not 1 <= int(day) <= 31:
             raise ValueError
+        """ creating times list for validating times variable is between 8 and 5"""
         times = [1,2,3,4,5,8,9,10,11,12]
-        if not time in times:
+        """validating times variable is on times list"""
+        if not int(time) in times:
             raise time_range
 
-
-
+        """setting variables"""
         self.month = month
         self.day = int(day)
         self.time = int(time)
@@ -31,8 +42,10 @@ class appt:
         self.am_or_pm = am_or_pm
         self.subject = subject
 
-    def __repr__(self):
-        return 'Month'+ self.month + 'Day'+  str(self.day) + 'Time' + str(self.time) + self.am_or_pm + 'Duration' + self.duration
 
+    def __repr__(self):
+        """repr function"""
+        return 'Month'+ str(self.month) + 'Day'+ str(self.day) + 'Time' + str(self.time) + str(self.am_or_pm) + 'Duration' + str(self.duration)
     def __str__(self):
-        return 'Month' + self.month + 'Day' + str(self.day) + 'Time'+ str(self.time) + self.am_or_pm + 'Duration'+ self.duration
+        """ str function"""
+        return 'Month '+ str(self.month) + ' Day '+ str(self.day) + ' Time ' + str(self.time) + str(self.am_or_pm) + ' Duration ' + str(self.duration)
