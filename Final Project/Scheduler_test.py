@@ -49,7 +49,7 @@ class MyTestCase(unittest.TestCase):
         with self.assertRaises(Exception):
             appt(7, 31, 6, 3, 'AM', 'TEST')
     def test_object_creation_str_return(self):
-        self.assertEqual(str(self.appt1), "Month 11 Day 1 Time 8AM Duration 2")
+        self.assertEqual(str(self.appt1), "Month January Day 1 Time 8AM Duration 2")
 
     """ Creating Test Cases for calendar_list class"""
     def test_calendar_object_creation_str_return(self):
@@ -61,7 +61,7 @@ class MyTestCase(unittest.TestCase):
         self.assertFalse(self.calendar1.add_appt(self.appt1))
     def test_calendar_display_appt(self):
         self.calendar1.add_appt(self.appt1)
-        self.assertEqual(self.calendar1.display_appt(), ['Appointment: 11 1 at 8AM Subject: TEST'])
+        self.assertEqual(self.calendar1.display_appt(), ['Appointment: January 1 at 8AM Subject: TEST'])
 
 
 if __name__ == '__main__':

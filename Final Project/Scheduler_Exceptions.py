@@ -1,3 +1,14 @@
+"""
+PEP: 8
+Title: Scheduler exceptions
+Author: Kevin Cook
+Status: Active
+Type: Process
+Created: 12-12-2020
+Post:12-12-2020
+History:
+"""
+
 class Error(Exception):
     """Base"""
     pass

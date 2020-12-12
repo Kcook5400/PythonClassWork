@@ -1,3 +1,15 @@
+"""
+PEP: 8
+Title: appt
+Author: Kevin Cook
+Status: Active
+Type: Process
+Created: 12-12-2020
+Post:12-12-2020
+History:
+"""
+
+
 from Scheduler_Exceptions import day_range, time_range
 
 class appt:
@@ -5,9 +17,14 @@ class appt:
         """Creates instance of appt class"""
         months_list = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September",
                        "October", "November", "December"]
+
+        for x in range(1, 12):
+            if month in months_list:
+                month = x
+
         """validating month, day, time, and duration variables are ints"""
         try:
-            val = str(month)
+            val = int(month)
             val = str(day)
             val = str(time)
             val = str(duration)
@@ -17,11 +34,11 @@ class appt:
         if str(am_or_pm).isalpha() == False:
             raise ValueError
         """validating month variable is a month"""
-        self.month= month
-        if not month in months_list:
+        print(month)
+        if not 1 <= month <= 31:
             raise ValueError
         """creating months list for validating months with <31 days"""
-        months = ["September", "April", "June", "November"]
+        months = [9, 4, 6, 11]
         """validating days variable is not >30 in months with only 30 days"""
         if month in months and int(day) > 30:
             raise day_range
